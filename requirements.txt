@@ -1,0 +1,15 @@
+fastapi
+uvicorn
+requests
+beautifulsoup4
+selenium
+pandas
+openai
+python-dotenv
+pdfplumber
+pydantic
+pdfkit
+Jinja2
+xlsxwriter
+yfinance
+pandas_ta
