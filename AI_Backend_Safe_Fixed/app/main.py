@@ -7,7 +7,7 @@ app = FastAPI(title="AI Stock Screener")
 # ✅ Enable CORS for frontend
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://ai-stock-frontend.vercel.app"],
+    allow_origins=["https://ai-stock-frontend-vnpr.vercel.app"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
