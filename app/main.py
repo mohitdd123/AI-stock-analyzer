@@ -1,10 +1,11 @@
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
+
 from app.routes.analysis import router as analysis_router
 from app.routes.smart_screener import router as smart_router
 from app.routes.upload import router as upload_router
 
 app = FastAPI(title="AI Stock Screener")
-from fastapi.middleware.cors import CORSMiddleware
 
 app.add_middleware(
     CORSMiddleware,
