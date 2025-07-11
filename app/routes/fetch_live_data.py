@@ -114,8 +114,11 @@ def refresh_all_stocks():
     return run_refresh()
 
 @app.on_event("startup")
-@repeat_every(seconds=86400, raise_exceptions=True)  # every 24 hours
-def scheduled_refresh():
+async def start_scheduler():
+    @repeat_every(seconds=86400, raise_exceptions=True)
+    async def scheduled_refresh():
+        print("Auto-refreshing...")
+        run_refresh():
     print(f"[CRON] Refresh triggered at {datetime.datetime.now()}")
     run_refresh()
 
