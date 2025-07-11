@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from app.routes.smart_screener import router as smart_router
+from app.routes import fetch_live_data
 
 app = FastAPI(title="AI Stock Screener")
 
@@ -18,3 +19,5 @@ def health_check():
     return {"status": "Backend is alive"}
 
 app.include_router(smart_router, prefix="/screened")
+
+app.include_router(fetch_live_data.app)
