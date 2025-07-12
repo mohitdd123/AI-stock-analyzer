@@ -114,7 +114,6 @@ def calculate_technical_analysis(data):
 def refresh_all_stocks():
     return run_refresh()
     
-        run_refresh()
     print(f"[CRON] Refresh triggered at {datetime.datetime.now()}")
     run_refresh()
 
