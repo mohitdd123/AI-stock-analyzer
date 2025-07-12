@@ -177,7 +177,7 @@ def analyze_stock(symbol):
             }
         except:
             valuation_chart = {"years": [], "price": [], "intrinsic": []}
-    return {
+        return {
         "symbol": symbol,
         "name": base["name"],
         "sector": base["sector"],
