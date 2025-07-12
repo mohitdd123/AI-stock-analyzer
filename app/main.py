@@ -20,4 +20,4 @@ def health_check():
 
 app.include_router(smart_router, prefix="/screened")
 
-app.include_router(fetch_live_data.app)
+app.include_router(fetch_live_data.router)
