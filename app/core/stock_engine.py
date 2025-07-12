@@ -177,7 +177,7 @@ def analyze_stock(symbol):
             }
         except:
             valuation_chart = {"years": [], "price": [], "intrinsic": []}
-    return {
+return {
         "symbol": symbol,
         "name": base["name"],
         "sector": base["sector"],
@@ -244,8 +244,6 @@ def get_ai_summary(stock_data):
             messages=[{"role": "user", "content": prompt}]
         )
         return response['choices'][0]['message']['content'].strip()
-    except Exception as e:
-        return f"AI summary unavailable: {e}"
     except Exception as e:
         return f"AI summary unavailable: {e}"
 
