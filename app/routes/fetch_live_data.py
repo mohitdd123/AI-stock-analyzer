@@ -1,5 +1,5 @@
 
-from fastapi import FastAPI
+from fastapi import APIRouter
 import requests
 from bs4 import BeautifulSoup
 import json
@@ -7,7 +7,8 @@ import json
 from fastapi_utils.tasks import repeat_every
 import datetime
 
-app = FastAPI()
+from fastapi import APIRouter
+router = APIRouter()
 
 def safe_float(x):
     try:
@@ -109,7 +110,7 @@ def calculate_technical_analysis(data):
     except Exception as e:
         return {"error": str(e)}
 
-@app.get("/refresh/all")
+@router.get("/refresh/all")
 def refresh_all_stocks():
     return run_refresh()
 
