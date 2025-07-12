@@ -113,12 +113,7 @@ def calculate_technical_analysis(data):
 @router.get("/refresh/all")
 def refresh_all_stocks():
     return run_refresh()
-
-@app.on_event("startup")
-async def start_scheduler():
-    @repeat_every(seconds=86400, raise_exceptions=True)
-    async def scheduled_refresh():
-        print("Auto-refreshing...")
+    
         run_refresh()
     print(f"[CRON] Refresh triggered at {datetime.datetime.now()}")
     run_refresh()
