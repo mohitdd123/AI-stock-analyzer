@@ -15,4 +15,5 @@ xlsxwriter
 yfinance
 pandas_ta
 typing-inspect
-
+python-multipart
+openpyxl
