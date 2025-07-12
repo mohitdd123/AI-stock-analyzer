@@ -174,7 +174,7 @@ def analyze_stock(symbol):
                 "years": [str(d.year) for d in hist.index[-5::52]],
                 "price": [round(p, 2) for p in hist['Close'][-5::52]],
                 "intrinsic": [intrinsic for _ in range(5)]
-    
+    }
         except:
             valuation_chart = {"years": [], "price": [], "intrinsic": []}
 
